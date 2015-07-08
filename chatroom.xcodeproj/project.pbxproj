@@ -15,6 +15,8 @@
 		E398E5111B4CCA7800E6B646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E50F1B4CCA7800E6B646 /* LaunchScreen.storyboard */; };
 		E398E51C1B4CCA7800E6B646 /* chatroomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E51B1B4CCA7800E6B646 /* chatroomTests.swift */; };
 		E398E5271B4CCA7800E6B646 /* chatroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E5261B4CCA7800E6B646 /* chatroomUITests.swift */; };
+		E398E5361B4D8AA500E6B646 /* FirstViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E5351B4D8AA500E6B646 /* FirstViewTableViewCell.swift */; };
+		E398E53C1B4DB76D00E6B646 /* CRTopicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E53B1B4DB76D00E6B646 /* CRTopicObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E398E5221B4CCA7800E6B646 /* chatroomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatroomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E398E5261B4CCA7800E6B646 /* chatroomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatroomUITests.swift; sourceTree = "<group>"; };
 		E398E5281B4CCA7800E6B646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E398E5351B4D8AA500E6B646 /* FirstViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewTableViewCell.swift; sourceTree = "<group>"; };
+		E398E53B1B4DB76D00E6B646 /* CRTopicObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRTopicObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E398E5041B4CCA7800E6B646 /* AppDelegate.swift */,
-				E398E5061B4CCA7800E6B646 /* FirstViewController.swift */,
+				E398E5341B4D8A8000E6B646 /* FirstViewController */,
 				E398E5081B4CCA7800E6B646 /* SecondViewController.swift */,
 				E398E50A1B4CCA7800E6B646 /* Main.storyboard */,
 				E398E50D1B4CCA7800E6B646 /* Assets.xcassets */,
@@ -126,6 +130,16 @@
 				E398E5281B4CCA7800E6B646 /* Info.plist */,
 			);
 			path = chatroomUITests;
+			sourceTree = "<group>";
+		};
+		E398E5341B4D8A8000E6B646 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E398E5061B4CCA7800E6B646 /* FirstViewController.swift */,
+				E398E5351B4D8AA500E6B646 /* FirstViewTableViewCell.swift */,
+				E398E53B1B4DB76D00E6B646 /* CRTopicObject.swift */,
+			);
+			name = FirstViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E398E5091B4CCA7800E6B646 /* SecondViewController.swift in Sources */,
+				E398E5361B4D8AA500E6B646 /* FirstViewTableViewCell.swift in Sources */,
 				E398E5051B4CCA7800E6B646 /* AppDelegate.swift in Sources */,
+				E398E53C1B4DB76D00E6B646 /* CRTopicObject.swift in Sources */,
 				E398E5071B4CCA7800E6B646 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +505,7 @@
 				E398E52D1B4CCA7800E6B646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E398E52E1B4CCA7800E6B646 /* Build configuration list for PBXNativeTarget "chatroomTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +514,7 @@
 				E398E5301B4CCA7800E6B646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E398E5311B4CCA7800E6B646 /* Build configuration list for PBXNativeTarget "chatroomUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +523,7 @@
 				E398E5331B4CCA7800E6B646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
