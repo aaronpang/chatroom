@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Duz-wu-ccj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -11,7 +11,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--First View Controller-->
+        <!--Front Page-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="chatroom" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,9 @@
                             <constraint firstItem="Met-cW-fi0" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="hwo-d7-fRT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8aV-S8-qCp"/>
+                    <navigationItem key="navigationItem" title="Front Page" id="8aV-S8-qCp">
+                        <barButtonItem key="backBarButtonItem" title="Front Page" id="5aS-6p-tUq"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="Met-cW-fi0" id="Alb-Ss-EaU"/>
                     </connections>
@@ -194,6 +196,42 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="M6J-rO-Jfa">
+            <objects>
+                <viewController title="LoginViewController" id="Duz-wu-ccj" userLabel="Login View Controller" customClass="LoginViewController" customModule="chatroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVW-pv-p4U"/>
+                        <viewControllerLayoutGuide type="bottom" id="gDN-qI-6kn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BVk-1A-Vhg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E5-c7-Msz" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Duz-wu-ccj" id="3lw-sj-bZL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6E5-c7-Msz" firstAttribute="centerX" secondItem="BVk-1A-Vhg" secondAttribute="centerX" id="cc2-Ux-WTb"/>
+                            <constraint firstItem="6E5-c7-Msz" firstAttribute="centerY" secondItem="BVk-1A-Vhg" secondAttribute="centerY" id="kYc-yX-xhn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="6E5-c7-Msz" id="66U-rl-Prg"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="loginViewControllerSegue" id="sfU-Bb-Yzs"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="loginViewNoAnimationControllerSegue" animates="NO" id="hGv-El-Jqn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FER-hK-6NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="0.0"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -218,4 +256,7 @@
         <image name="bluejaysLogo" width="640" height="78"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hGv-El-Jqn"/>
+    </inferredMetricsTieBreakers>
 </document>
