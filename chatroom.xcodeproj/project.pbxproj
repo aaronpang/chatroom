@@ -21,6 +21,7 @@
 		E398E5271B4CCA7800E6B646 /* chatroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E5261B4CCA7800E6B646 /* chatroomUITests.swift */; };
 		E398E5361B4D8AA500E6B646 /* FirstViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E5351B4D8AA500E6B646 /* FirstViewTableViewCell.swift */; };
 		E398E53C1B4DB76D00E6B646 /* CRTopicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E53B1B4DB76D00E6B646 /* CRTopicObject.swift */; };
+		E3A554421B50AA7F00661A4C /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A554411B50AA7F00661A4C /* FacebookManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E398E5351B4D8AA500E6B646 /* FirstViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewTableViewCell.swift; sourceTree = "<group>"; };
 		E398E53B1B4DB76D00E6B646 /* CRTopicObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRTopicObject.swift; sourceTree = "<group>"; };
 		E3A467CB1B4EF4E800A1411D /* AppBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBridgingHeader.h; sourceTree = "<group>"; };
+		E3A554411B50AA7F00661A4C /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E398E5041B4CCA7800E6B646 /* AppDelegate.swift */,
+				E3A554411B50AA7F00661A4C /* FacebookManager.swift */,
 				E398E5341B4D8A8000E6B646 /* FirstViewController */,
 				E398E5081B4CCA7800E6B646 /* SecondViewController.swift */,
 				E398E50A1B4CCA7800E6B646 /* Main.storyboard */,
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A554421B50AA7F00661A4C /* FacebookManager.swift in Sources */,
 				E338146A1B4F189200C752B9 /* LoginViewController.swift in Sources */,
 				E398E5091B4CCA7800E6B646 /* SecondViewController.swift in Sources */,
 				E398E5361B4D8AA500E6B646 /* FirstViewTableViewCell.swift in Sources */,
