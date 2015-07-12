@@ -12,13 +12,21 @@ enum FacebookManagerErrorCode: Int {
   case NoFBSDKAccessToken = 100
 }
 
+enum FacebookManagerObjectKey: String {
+  case name = "FBName"
+}
 
 
 class FacebookManager {
   static let sharedInstance = FacebookManager()
   private var name: String?
+  private let graphPathDictionary = [FacebookManagerObjectKey.name: ("me", "name")]
   
-  func requestName(completion: (result: String?, error: NSError?) -> ()) {
+  func requestName(completion: (result: AnyObject?, error: NSError?) -> ()) {
+    requestFBObject(completion)
+  }
+  
+  func requestFBObject(completion: (result: AnyObject?, error: NSError?) -> ()) {
     guard FBSDKAccessToken.currentAccessToken() != nil else {
       let errorCode = FacebookManagerErrorCode.NoFBSDKAccessToken
       let error = NSError(domain: "FacebookManager", code: errorCode.rawValue, userInfo: ["localizedDescription" : "User is not logged into Facebook on Chatroom."])

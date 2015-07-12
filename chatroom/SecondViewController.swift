@@ -16,7 +16,9 @@ class SecondViewController: UIViewController {
     super.loadView()
     FacebookManager.sharedInstance.requestName { (result, error) -> () in
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        self.nameLabel.text = result
+        if let resultString = result as? String {
+          self.nameLabel.text = resultString
+        }
       })
     }
   }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Duz-wu-ccj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
@@ -199,7 +199,7 @@
         <!--Login View Controller-->
         <scene sceneID="M6J-rO-Jfa">
             <objects>
-                <viewController title="LoginViewController" id="Duz-wu-ccj" userLabel="Login View Controller" customClass="LoginViewController" customModule="chatroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="LoginViewController" id="Duz-wu-ccj" userLabel="Login View Controller" customClass="LoginViewController" customModule="chatroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jVW-pv-p4U"/>
                         <viewControllerLayoutGuide type="bottom" id="gDN-qI-6kn"/>
@@ -227,7 +227,6 @@
                     <connections>
                         <outlet property="facebookLoginButton" destination="6E5-c7-Msz" id="66U-rl-Prg"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="loginViewControllerSegue" id="sfU-Bb-Yzs"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="loginViewNoAnimationControllerSegue" animates="NO" id="hGv-El-Jqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FER-hK-6NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,7 +236,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarController" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -259,7 +258,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hGv-El-Jqn"/>
-    </inferredMetricsTieBreakers>
 </document>

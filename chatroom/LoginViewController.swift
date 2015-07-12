@@ -16,14 +16,6 @@ class LoginViewController : UIViewController {
     super.loadView()
     facebookLoginButton.readPermissions = ["public_profile", "email", "user_friends",]
   }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    if FBSDKAccessToken.currentAccessToken() != nil {
-      performSegueWithIdentifier("loginViewNoAnimationControllerSegue", sender: self)
-    } else {
-    }
-  }
 }
 
 extension LoginViewController : FBSDKLoginButtonDelegate {

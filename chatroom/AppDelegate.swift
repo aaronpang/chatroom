@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     FBSDKLoginButton.load()
-    return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    let application = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    // Change the initial view controller if the user is already logged in
+    let viewControllerID = FBSDKAccessToken.currentAccessToken() == nil ? "loginViewController" : "mainTabBarController"
+    let viewController = storyboard.instantiateViewControllerWithIdentifier(viewControllerID)
+    window?.rootViewController = viewController
+    window?.makeKeyAndVisible()
+    return application
   }
   
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
