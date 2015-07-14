@@ -14,12 +14,23 @@ class SecondViewController: UIViewController {
 
   override func loadView() {
     super.loadView()
-    FacebookManager.sharedInstance.requestName { (result, error) -> () in
+    FacebookManager.sharedInstance.requestID { (result, error) -> () in
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
         if let resultString = result as? String {
           self.nameLabel.text = resultString
         }
       })
+    }
+    
+    
+    let request = FBSDKGraphRequest(graphPath: "/me", parameters:["fields" :
+      "picture.height(\(Int(profilePicImageView.frame.size.height))).width(\(Int(profilePicImageView.frame.size.width)))"])
+    request.startWithCompletionHandler { (connection, result, error) -> Void in
+      if error != nil {
+        print(error)
+      }
+      let url = result["picture"]
+      print(result)
     }
   }
   

@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3348D891B54B7A400A63794 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		E33814621B4EF98F00C752B9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E33814631B4EF98F00C752B9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E33814641B4EF98F00C752B9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		E33814681B4F0A5400C752B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3348D891B54B7A400A63794 /* SwiftyJSON.framework */,
 				E33814621B4EF98F00C752B9 /* FBSDKCoreKit.framework */,
 				E33814631B4EF98F00C752B9 /* FBSDKLoginKit.framework */,
 				E33814641B4EF98F00C752B9 /* FBSDKShareKit.framework */,
@@ -180,6 +182,7 @@
 				E398E4FD1B4CCA7800E6B646 /* Sources */,
 				E398E4FE1B4CCA7800E6B646 /* Frameworks */,
 				E398E4FF1B4CCA7800E6B646 /* Resources */,
+				E3348D8C1B54B93500A63794 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,6 +297,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E3348D8C1B54B93500A63794 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E398E4FD1B4CCA7800E6B646 /* Sources */ = {
@@ -451,6 +471,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/aaronpang/Documents/FacebookSDK,
+					"$(SRCROOT)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = chatroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -469,6 +490,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/aaronpang/Documents/FacebookSDK,
+					"$(SRCROOT)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = chatroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
