@@ -29,6 +29,10 @@ class FacebookManager {
     requestFBObject(.Name, completion: completion)
   }
   
+  func requestID(completion: (result: AnyObject?, error: NSError?) -> ()) {
+    requestFBObject(.ID, completion: completion)
+  }
+  
   //: MARK - Private
   private func requestFBObject(objectID: FacebookManagerObjectID, completion: (result: AnyObject?, error: NSError?) -> ()) {
     guard FBSDKAccessToken.currentAccessToken() != nil else {
